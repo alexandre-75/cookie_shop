@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Nos Meilleurs Cookies</h1>
+        <div class="products">
+            {% for product in products %}
+                <div class="product">
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.description }}</p>
+                    <p>{{ product.price }} €</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

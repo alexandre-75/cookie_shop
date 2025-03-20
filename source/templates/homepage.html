@@ -1,42 +1,6 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Shop</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <header>
-        <div class="logo">Logo</div>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Mes Cookies</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Presse</a></li>
-            </ul>
-        </nav>
-        <div class="icons">
-            <a href="#">User</a>
-            <a href="#">Cart</a>
-        </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <!-- <h1>Nos Meilleurs Cookies</h1>
-                <div class="cookie-list">
-                    <div class="cookie-item">Cookie 1</div>
-                    <div class="cookie-item">Cookie 2</div>
-                    <div class="cookie-item">Cookie 3</div>
-                </div> -->
-                {% block content %}
-                {% endblock %}
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+{% extends 'base.html' %}
 
+
+{% block content %}
+    <h1>Bienvenue sur la page d'accueil de mon site :<br>Le Cookie Gourmand!</h1>
+{% endblock %}

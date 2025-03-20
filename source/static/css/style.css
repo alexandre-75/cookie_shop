@@ -1,8 +1,17 @@
-body {
-    font-family: Arial, sans-serif;
+html, body {  
+    height: 100%;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    padding: 0; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    color: black;
+    font-size: 16px;
+    
 }
 
 header {
@@ -10,8 +19,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px;
+    background-color: grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
 }
 
 .logo {
@@ -20,9 +30,10 @@ header {
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     gap: 20px;
+    list-style: none;
+    
 }
 
 nav ul li a {
@@ -42,28 +53,21 @@ nav ul li a {
     font-weight: bold;
 }
 
-.hero {
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
     text-align: center;
-    padding: 50px 20px;
-    background-color: #fff;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
 }
 
-.hero-content h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.cookie-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.cookie-item {
-    padding: 10px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    font-size: 16px;
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
 }

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
 
-def index(request):
-    return render(request, "homepage.html", context={"prenom": "Alex"})
+def homepage(request):
+    context = {'extra_css': 'css/homepage.css'}
+    return render(request, "homepage.html", context)

@@ -1,0 +1,38 @@
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #e60012; /* Couleur rouge pour le titre */
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px; /* Largeur fixe pour les carrés */
+    text-align: center;
+}
+
+.product h2 {
+    color: #e60012; /* Couleur rouge pour les titres des produits */
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.product p {
+    color: #333;
+    font-size: 1em;
+    margin: 10px 0;
+}

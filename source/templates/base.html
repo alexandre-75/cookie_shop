@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Cookie Gourmand</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% if extra_css %}
+        <link rel="stylesheet" type="text/css" href="{% static extra_css %}">
+    {% endif %}
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Mes Cookies</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Presse</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="#">Connexion</a>
+            <a href="#">Compte</a>
+            <a href="#">Panier</a>
+            <a href="#">Deconnexion</a>
+        </div>
+    </header>
+    <main>    
+        {% block content %}
+        {% endblock %}     
+    </main>
+    <footer>
+        <p>&copy; 2025 Le Cookie Gourmand. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
