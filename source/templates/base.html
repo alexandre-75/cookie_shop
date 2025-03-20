@@ -15,14 +15,15 @@
         <div class="logo">Logo</div>
         <nav>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Mes Cookies</a></li>
+                <li><a href="{% url 'homepage' %}">Accueil</a></li>
+                <li><a href="{% url 'products_management-all_products' %}">Mes Cookies</a></li>
                 <li><a href="#">À propos</a></li>
                 <li><a href="#">Presse</a></li>
             </ul>
         </nav>
         <div class="icons">
             <a href="#">Connexion</a>
+            <a href="{% url 'accounts-sign_up' %}">S'inscrire</a>
             <a href="#">Compte</a>
             <a href="#">Panier</a>
             <a href="#">Deconnexion</a>
