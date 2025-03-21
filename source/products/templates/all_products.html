@@ -9,7 +9,7 @@
                     <h2>{{ product.name }}</h2>
                     <p>{{ product.description }}</p>
                     <p>{{ product.price }} €</p>
-                    <a href="{% url 'products_management-product_details' slug=product.slug %}">Voir l'article</a>
+                    <a href="{% url 'products-product_details' slug=product.slug %}">Voir l'article</a>
                 </div>
             {% endfor %}
         </div>

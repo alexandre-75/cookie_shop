@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>Shopping Cart</h1>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        {% for item in cart %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.product.price }}</td>
+                <td>{{ item.quantity }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'products-all_products' %}">Continue Shopping</a>
+    <a href="{% url 'shopping_cart-delete_cart' %}">Supprimer le panier</a>
+{% endblock %}
