@@ -7,54 +7,71 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background: linear-gradient(to left, #ffefba, #ffffff);
     font-family: Arial, sans-serif;
     color: black;
-    font-size: 16px;
-    
+    font-size: 16px;  
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    margin: 10px 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    /* background-color: #ffe5cc; */
+    background: linear-gradient(to right, #ffefba, #ffffff);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    width: 150%; /* Ajustez la largeur */
-    height: 150px; /* Maintient les proportions */
+    background: linear-gradient(to right, #fc4a1a,#f7b733);
+    padding: 10px;
+    margin: 10px;
+    width: 125%;
+    height: 125px;
+    border-radius: 10px;
+    
 }
 
 nav ul {
     display: flex;
-    gap: 20px;
-    list-style: none;
-    
+    gap: 40px;
+    list-style: none;  
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-size: 1.4em;
 }
 
 .icons {
     display: flex;
-    gap: 10px;
+    padding: 10px;
+    gap: 20px;
+    font-weight: bold;
 }
 
 .icons a {
     text-decoration: none;
     color: #333;
-    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px 10px;
 }
+.link:hover {
+    color: #ff6347;
+}
+
 
 main {
     flex: 1;
+    padding: 20px;
+    margin-top: 160px; /* Ajustez cette valeur en fonction de la hauteur de votre navbar */
     padding: 20px;
 }
 
@@ -70,4 +87,69 @@ footer p {
     margin: 0;
     font-size: 0.9em;
     color: #555;
+}
+.footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-section p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff6347;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6347;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
 }

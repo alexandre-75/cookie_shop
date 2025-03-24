@@ -12,26 +12,32 @@
 </head>
 <body>
     <header>
-        <a href="{% url 'homepage' %}"><img src="{% static 'pictures/logo_les_cookies_gourmand.png' %}" class="logo"></a>
+        <a href="{% url 'homepage' %}"><img src="{% static 'pictures/logo.jpg' %}" class="logo"></a>
 
         <nav>
             <ul>
-                <li><a href="{% url 'homepage' %}">Accueil</a></li>
-                <li><a href="{% url 'products-all_products' %}">Mes Cookies</a></li>
+                <li><a href="{% url 'homepage' %}" class="link">Accueil</a></li>
+                <li><a href="{% url 'products-all_products' %}" class="link">Mes Cookies</a></li>
+                <li><a href="{% url 'about' %}" class="link">À propos</a></li>
             </ul>
         </nav>
+
         <div class="icons">
             {% if user.is_authenticated %}                 
-                <a href="{% url 'accounts-logout' %}">Déconnexion</a>
+                <a href="{% url 'accounts-logout' %}" class="link">Déconnexion</a>
                 {%if user.cart %}
-                    <a href="{% url 'shopping_cart-cart' %}">Panier ({{ user.cart.total_quantity }})</a>
+                    <a href="{% url 'shopping_cart-cart' %}" class="link">Panier ({{ user.cart.total_quantity }})</a>
                 {% endif %}
             {% else %}
-                <a href="{% url 'accounts-sign_up' %}">S'inscrire</a>
-                <a href="{% url 'accounts-sign_in' %}">Connexion</a>
+                <a href="{% url 'accounts-sign_up' %}" class="link">S'inscrire</a>
+                <a href="{% url 'accounts-sign_in' %}" class="link">Connexion</a>
             {% endif %}
         </div>
+
     </header>
+
+
+
     <main> 
         <div class="autenticated">
             {% if user.is_authenticated %}
@@ -41,8 +47,31 @@
         {% block content %}
         {% endblock %}     
     </main>
-    <footer>
-        <p>&copy; 2025 Le Cookie Gourmand. Tous droits réservés.</p>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>À propos de nous</h2>
+                <p>Le Cookie Gourmand est votre destination pour les meilleurs cookies faits maison. Découvrez notre histoire et notre passion pour les pâtisseries.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contactez-nous</h2>
+                <p>Email : contact@lecookiegourmand.com</p>
+                <p>Téléphone : +33 1 23 45 67 89</p>
+            </div>
+            <div class="footer-section social">
+                <h2>Suivez-nous</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Site : Alexandre.S . Tous droits réservés.</p>
+        </div>
     </footer>
+    
 </body>
 </html>
